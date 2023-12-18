@@ -117,7 +117,10 @@ body{
     height: 100vh;
     left: 0;
     right: 0;
-    padding: 240px 0;
+    padding: 80px 0;
+    display: flex;
+    align-items: flex-end;
+    
     
 }
 .title{
@@ -127,6 +130,7 @@ body{
     font-family: 'Anton', sans-serif;
     text-transform: uppercase;
     letter-spacing: 5px;
+    opacity: 0.9;
     /* background: var(--gradient, linear-gradient(180deg, rgb(101, 196, 230) 0%, rgba(147, 107, 235, 0.93) 100%));
     background-clip: text;
     -webkit-background-clip: text;
@@ -150,6 +154,7 @@ body{
 
 .about{
     padding: 100px 0;
+    /* border-bottom: 1px solid #CACAD6; */
 }
 .tittle-section{
     font-size: 36px;
@@ -158,7 +163,8 @@ body{
     color: #868585;
     margin-bottom: 40px;
     text-transform: uppercase;
-    max-width: 510px;
+    /* max-width: 510px; */
+    text-align: center;
 }
 .about-inneer{
     display: flex;
@@ -250,6 +256,7 @@ body{
 .developers-items{
     display: grid;
     grid-template-columns: repeat(4,1fr);
+    justify-content: center;
    
 }
 .developers-item{
@@ -300,7 +307,7 @@ body{
     display: flex;
 }
 .portfolio-slider-img{
-    flex-basis: 510px;
+    /* flex-basis: 510px; */
     margin-bottom: 30px;
     margin-right: 90px;
     object-fit: cover;
@@ -324,13 +331,15 @@ body{
 }
 .fond-inneer{
     display: flex;
+    justify-content: space-between;
 }
 .fond-content{
-    flex-basis: 510px;
+    /* flex-basis: 510px; */
     margin-right: 90px;
 }
-
-
+.fond-link:hover{
+    color: #ff4040;
+}
 
 
 .footer{
@@ -395,6 +404,9 @@ body{
     }
     .fond-inneer{
         flex-wrap: wrap;
+    }
+    .fond-inneer .about-img{
+        height:auto;
     }
     .fond-content{
         flex-basis: 100%;
@@ -484,18 +496,7 @@ body{
         grid-template-columns: repeat(1,1fr);
         gap: 20px;
     }
-    .portfolio-slider-box{
-        display: block;
-    }
-    .portfolio-slider-box-title{
-        max-width: 100%;
-    }
-    .portfolio-slider-img{
-        width: 100%;
-        object-fit: cover;
-        height: 300px;
-        margin-right: 0;
-    }
+    
     .tittle-section{
         font-size: 28px;
     }
@@ -504,8 +505,12 @@ body{
     .logo{
         font-size: 26px;
     }
+    .top{
+        align-items: flex-start;
+        padding: 220px 0;
+    }
     .title{
-        font-size: 38px;
+        font-size: 40px;
     }
     .about {
         padding: 50px 0;
@@ -531,5 +536,22 @@ body{
     .city-subtitle{
         font-size: 20px;
         margin: 0 0 20px;
+    }
+    .portfolio-slider-box{
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .portfolio-slider .slick-dots{
+        position: absolute;
+    }
+    /* .portfolio-slider-box-title{
+        max-width: 100%;
+    } */
+    .portfolio-slider-img{
+        object-fit: cover;
+        margin-right: 0;
+        
     }
 }
