@@ -201,6 +201,29 @@ body {
 
   /* font-size: 20px; */
 }
+.step-list {
+  /* убираю цифры у ol(так как мне нужно задать другие) */
+  list-style: none;
+  counter-reset: number;
+}
+.step-list-item {
+  counter-increment: number;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.step-list-item::before {
+  /* задаю списку значения 01 02 03 */
+  content: "0" counter(number);
+  margin-bottom: 11px;
+  color: #868585;
+}
+/* nth-child - это возможность обратиться к какому то элементу */
+/* если вдруг список будет больше 9, чтобы пере 10 не было 0 , я его убрал из контента*/
+.step-list-item:nth-child(n + 10)::before {
+  content: counter(number);
+}
+
 .city-slider {
   padding-right: 10px;
 }
